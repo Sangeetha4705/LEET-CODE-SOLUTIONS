@@ -1,0 +1,17 @@
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        
+        char temp;
+        map<char,int>freq;
+        for(char c:s)freq[c]++;
+        for(char c:t)freq[c]++;
+        for(char c:t){
+            if(freq[c]%2!=0){
+                temp=c;
+                break;
+            }
+        }
+        return temp;
+    }
+};
